@@ -7,11 +7,10 @@ A mock SAM labs service for development/testing
 var createServer = require('sam-mock-service').createServer
 
 var opts = {
-  port: 3001,
   // Users that can login to the system
   users: [
     {
-      _id: '1'
+      _id: '1',
       username: 'joebloggs',
       email: 'joe@example.org',
       password: 'letmein'
@@ -19,9 +18,9 @@ var opts = {
   ]
 }
 
-createServer(opts).listen(opts.port, function (er) {
+createServer(opts).listen(3001, function (er) {
   if (er) throw er
-  console.log('SAM Labs mock service started at :' + opts.port)
+  console.log('SAM Labs mock service started at :3001')
 })
 ```
 
