@@ -37,7 +37,7 @@ function loginHandler (opts, req, res) {
 
   if (!user) {
     res.statusCode = 401
-    res.end()
+    return res.end()
   }
 
   var hash = crypto.createHash('sha256').update(crypto.randomBytes(256)).digest('base64')
