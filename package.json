@@ -1,0 +1,29 @@
+{
+  "name": "sam-mock-service",
+  "version": "0.0.0",
+  "description": "A mock SAM labs service for development/testing",
+  "main": "index.js",
+  "scripts": {
+    "start": "node bin/service.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "sam-mock-service": "bin/service.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tableflip/sam-mock-service.git"
+  },
+  "author": "Alan Shaw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tableflip/sam-mock-service/issues"
+  },
+  "homepage": "https://github.com/tableflip/sam-mock-service",
+  "dependencies": {
+    "concat-stream": "^1.4.7",
+    "minimist": "^1.1.1",
+    "rc": "^0.6.0",
+    "xtend": "^4.0.0"
+  }
+}
