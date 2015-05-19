@@ -3,7 +3,7 @@ var crypto = require('crypto')
 var concat = require('concat-stream')
 
 var handlers = {
-  '/api/login': loginHandler
+  '/login': loginHandler
 }
 
 exports.createServer = function (opts) {
@@ -13,7 +13,7 @@ exports.createServer = function (opts) {
   return http.createServer(function (req, res) {
     if (!handlers[req.url]) {
       res.statusCode = 404
-      res.end()
+      return res.end()
     }
 
     res.setHeader('Content-Type', 'application/json')
