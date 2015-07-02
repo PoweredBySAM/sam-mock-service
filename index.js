@@ -3,7 +3,7 @@ var crypto = require('crypto')
 var concat = require('concat-stream')
 
 var handlers = {
-  '/login': loginHandler
+  '/website/login': loginHandler
 }
 
 exports.createServer = function (opts) {
